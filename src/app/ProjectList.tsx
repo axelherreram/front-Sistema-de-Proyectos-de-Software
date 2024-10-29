@@ -386,7 +386,7 @@ const ProjectList: React.FC = () => {
             {selectedProjects.map((project) => (
               <div
                 key={project.id}
-                className="relative border border-gray-200 rounded-lg p-6 shadow-lg bg-white hover:shadow-xl transition-shadow duration-300 min-h-54"
+                className="relative border border-gray-200 rounded-lg p-6 shadow-lg bg-white hover:shadow-xl transition-shadow duration-300 min-h-70 sm:min-h-50 "
               >
                 <span className="absolute top-1 right-1 bg-blue-100 text-blue-700 font-semibold text-xs px-3 py-1 rounded-full shadow-md">
                   {project.status}
