@@ -8,11 +8,11 @@ import ECommerce from './pages/Dashboard/ECommerce';
 
 import Profile from './pages/Profile';
 import Settings from './pages/Settings';
-import Tables from './pages/Tables';
 import Alerts from './pages/UiElements/Alerts';
 import DefaultLayout from './layout/DefaultLayout';
 
 import ProyectoList from './app/ProjectList';
+import ProjectDetail from './app/ProjectDetail';
 
 function App() {
   const [loading, setLoading] = useState<boolean>(true);
@@ -49,6 +49,15 @@ function App() {
             </>
           }
         />
+        <Route path="/projects/:projectId"
+        element={
+          <>
+            <PageTitle title="Detalle por proyecto" />
+            <ProjectDetail />
+          </>
+        }
+        />
+
         <Route
           path="/profile"
           element={
@@ -59,15 +68,6 @@ function App() {
           }
         />
 
-        <Route
-          path="/tables"
-          element={
-            <>
-              <PageTitle title="Tables | TailAdmin - Tailwind CSS Admin Dashboard Template" />
-              <Tables />
-            </>
-          }
-        />
         <Route
           path="/settings"
           element={
