@@ -6,13 +6,13 @@ import PageTitle from './components/PageTitle';
 
 import ECommerce from './pages/Dashboard/ECommerce';
 
-import Profile from './pages/Profile';
 import Settings from './pages/Settings';
 import Alerts from './pages/UiElements/Alerts';
 import DefaultLayout from './layout/DefaultLayout';
 
 import ProyectoList from './app/ProjectList';
 import ProjectDetail from './app/ProjectDetail';
+import Phases from './app/Phases'
 
 function App() {
   const [loading, setLoading] = useState<boolean>(true);
@@ -57,15 +57,13 @@ function App() {
           </>
         }
         />
-
-        <Route
-          path="/profile"
-          element={
-            <>
-              <PageTitle title="Perfil" />
-              <Profile />
-            </>
-          }
+         <Route path="/fases"
+        element={
+          <>
+            <PageTitle title="Detalle por proyecto" />
+            <Phases />
+          </>
+        }
         />
 
         <Route
