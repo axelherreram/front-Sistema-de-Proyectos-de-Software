@@ -18,7 +18,7 @@ const PhasesComponent: React.FC = () => {
 
   const fetchPhases = async () => {
     try {
-      const response = await fetch('http://localhost:3000/phases', {
+      const response = await fetch('https://sistema-de-proyectos-de-software.onrender.com/phases', {
         method: 'GET',
         headers: { 'Accept': 'application/json' },
       });
@@ -42,7 +42,7 @@ const PhasesComponent: React.FC = () => {
   const updatePhaseColor = async () => {
     if (selectedPhase) {
       try {
-        const response = await fetch(`http://localhost:3000/phases/${selectedPhase.id}`, {
+        const response = await fetch(`https://sistema-de-proyectos-de-software.onrender.com/phases/${selectedPhase.id}`, {
           method: 'PUT',
           headers: {
             'Content-Type': 'application/json',
@@ -77,7 +77,7 @@ const PhasesComponent: React.FC = () => {
 
   const createNewPhase = async () => {
     try {
-      const response = await fetch('http://localhost:3000/phases', {
+      const response = await fetch('https://sistema-de-proyectos-de-software.onrender.com/phases', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

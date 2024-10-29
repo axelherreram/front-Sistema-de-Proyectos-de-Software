@@ -58,7 +58,7 @@ const ProjectDetail: React.FC = () => {
   const fetchProjectDetail = async () => {
     try {
       const response = await fetch(
-        `http://localhost:3000/projects/${projectId}`,
+        `https://sistema-de-proyectos-de-software.onrender.com/projects/${projectId}`,
         {
           method: 'GET',
           headers: { Accept: 'application/json' },
@@ -77,7 +77,7 @@ const ProjectDetail: React.FC = () => {
   const fetchModules = async () => {
     try {
       const response = await fetch(
-        `http://localhost:3000/modules/project/${projectId}`,
+        `https://sistema-de-proyectos-de-software.onrender.com/modules/project/${projectId}`,
         {
           method: 'GET',
           headers: { Accept: 'application/json' },
@@ -119,7 +119,7 @@ const ProjectDetail: React.FC = () => {
 
   const fetchPhases = async () => {
     try {
-      const response = await fetch('http://localhost:3000/phases', {
+      const response = await fetch('https://sistema-de-proyectos-de-software.onrender.com/phases', {
         method: 'GET',
         headers: { Accept: 'application/json' },
       });
@@ -134,7 +134,7 @@ const ProjectDetail: React.FC = () => {
   const handleCreateModule = async () => {
     setIsSubmitting(true);
     try {
-      const response = await fetch('http://localhost:3000/modules', {
+      const response = await fetch('https://sistema-de-proyectos-de-software.onrender.com/modules', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -192,7 +192,7 @@ const ProjectDetail: React.FC = () => {
 
       if (result.isConfirmed) {
         const response = await fetch(
-          `http://localhost:3000/modules/${moduleId}`,
+          `https://sistema-de-proyectos-de-software.onrender.com/modules/${moduleId}`,
           {
             method: 'DELETE',
             headers: { Accept: '*/*' },

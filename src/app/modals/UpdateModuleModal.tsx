@@ -63,7 +63,7 @@ const UpdateModuleModal: React.FC<UpdateModuleModalProps> = ({
   const handleUpdate = async () => {
     try {
       const response = await fetch(
-        `http://localhost:3000/modules/${moduleData.id}`,
+        `https://sistema-de-proyectos-de-software.onrender.com/modules/${moduleData.id}`,
         {
           method: 'PUT',
           headers: {
