@@ -12,7 +12,7 @@ import DefaultLayout from './layout/DefaultLayout';
 
 import ProyectoList from './app/ProjectList';
 import ProjectDetail from './app/ProjectDetail';
-import Phases from './app/Phases'
+import Phases from './app/phases';
 
 function App() {
   const [loading, setLoading] = useState<boolean>(true);
